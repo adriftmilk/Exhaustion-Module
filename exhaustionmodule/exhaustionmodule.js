@@ -188,4 +188,5 @@ class ExhaustionInfoIcons {
   });
   
   console.log("Exhaustion Module loaded");
+  //test message for a fresh vscode commit
   
