@@ -146,7 +146,7 @@ class ExhaustionInfoIcons {
   
   Hooks.once("init", () => {
   
-    game.settings.register('token-info-icons', 'gmOnly', {
+    game.settings.register('exhaustionmodule', 'gmOnly', {
         name: "GM only?",
         hint: "Show the token info to the GM only or to all players?",
         scope: "world",
@@ -155,19 +155,10 @@ class ExhaustionInfoIcons {
         type: Boolean
     });
   
-    game.settings.register('token-info-icons', 'allPassiveSenses', {
+    game.settings.register('exhaustionmodule', 'allPassiveSenses', {
         name: 'Show all passive senses (dnd5e)',
         hint: 'Show passive perception/investigation/insight/stealth instead of just passive perception',
         scope: "world",
-        config: true,
-        default: false,
-        type: Boolean
-    });
-
-    game.settings.register('token-info-icons', 'exhaustionLevel',{ //added exhaustion display toggle
-        name:'Show levels of Exhaustion',
-        hint:'Show levels of exhaustion which can be adjusted via attributes on character sheet',
-        scope: 'world',
         config: true,
         default: false,
         type: Boolean
@@ -182,7 +173,7 @@ class ExhaustionInfoIcons {
         type: Boolean
     });
   
-    game.settings.register('token-info-icons', 'position', {
+    game.settings.register('exhaustionmodule', 'position', {
         name: "Token Position",
         hint: "Which side of the token should the info appear on?",
         scope: "world",
@@ -196,5 +187,6 @@ class ExhaustionInfoIcons {
     });
   });
   
-  console.log("Token Info Icons loaded");
+  console.log("Exhaustion Module loaded");
+  //test message for a fresh vscode commit
   
