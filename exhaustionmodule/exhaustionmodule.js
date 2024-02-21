@@ -68,7 +68,7 @@ class ExhaustionInfoIcons {
   
         let newdiv = '<div class="token-info-container">';
   
-        let position = game.settings.get('token-info-icons', 'position');
+        let position = game.settings.get('exhaustionmodule', 'position');
   
         let defaultButtons = '<div class="control-icon token-info-icon">' + speed + '</div><div class="control-icon token-info-icon" title="Armor Class: ' + ac + '"><i class="fas fa-shield-alt"></i> ' + ac + '</div>';
         if (game.world.system !== "dcc"){
@@ -83,7 +83,7 @@ class ExhaustionInfoIcons {
   
         let passiveSensesButtons = '';
         
-        if (!['pf2e', 'pf1'].includes(game.world.system) && game.settings.get('token-info-icons', 'allPassiveSenses')) {
+        if (!['pf2e', 'pf1'].includes(game.world.system) && game.settings.get('exhaustionmodule', 'allPassiveSenses')) {
             const investigation = actor.system.skills.inv.passive;
             const insight = actor.system.skills.ins.passive;
             const stealth = actor.system.skills.ste.passive;
@@ -101,7 +101,7 @@ class ExhaustionInfoIcons {
         //Adding a new button specifically for exhaustion level display 
         let exhaustionLevelButton = '';
 
-        if(!['pf2e', 'pf1'].includes(game.world.system) && game.settings.get('token-info-icons', 'exhaustionLevel')) { //check to see if display exhaustion setting is toggled
+        if(!['pf2e', 'pf1'].includes(game.world.system) && game.settings.get('exhaustionmodule', 'exhaustionLevel')) { //check to see if display exhaustion setting is toggled
 
             const exhaustion = actor.system.attributes.exhaustion;//get the exhaustion value from the actor
 
@@ -129,7 +129,7 @@ class ExhaustionInfoIcons {
   }
   
   Hooks.on('ready', () => {
-    const gmOnly = game.settings.get('token-info-icons', 'gmOnly');
+    const gmOnly = game.settings.get('exhaustionmodule', 'gmOnly');
   
     if (gmOnly) {
         if (game.user.isGM) {
