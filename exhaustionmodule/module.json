@@ -1,0 +1,26 @@
+{
+  "id": "exhaustionmodule",
+  "title": "Exhaustion Module",
+  "scripts": [
+    "/exhaustionmodule.js"
+  ],
+  "styles": [
+    "/css/token-info-icons.css"
+  ],
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+  },
+  "relationships": {
+    "systems": {
+      "id": "dnd5e",
+      "type": "system",
+      "compatibility": {
+        "minimum": "2.2.2",
+        "verified": "2.4.0",
+        "maximum": "3.1.9"
+      }
+    }
+  }
+}
